@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.my.asadullah.implicitintents"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permissons.CAMERA" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-alpha1" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="id.my.asadullah.implicitintents.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="id.my.asadullah.implicitintents.AudioManagerActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.AudioRecorderActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.BluetoothActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.BrowserActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.CameraActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.EmailActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.PhoneActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.SmsActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.TTSActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.VideoActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.WifiActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.AlarmActivity" />
+        <activity android:name="id.my.asadullah.implicitintents.helper.MyFunction" >
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="id.my.asadullah.lanjutanpertama.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name="id.my.asadullah.implicitintents.AlarmReceiver" />
+    </application>
+
+</manifest>
